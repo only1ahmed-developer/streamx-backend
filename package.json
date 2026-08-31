@@ -1,0 +1,30 @@
+{
+  "name": "streamx-backend",
+  "version": "1.0.0",
+  "description": "StreamX Backend - Node.js/Express BFF server that sits between the Flutter app / Admin Dashboard and external content APIs (Dave Tech API and future sources).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "cookie-parser": "^1.4.6",
+    "express-rate-limit": "^7.4.0",
+    "ioredis": "^5.4.1",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
