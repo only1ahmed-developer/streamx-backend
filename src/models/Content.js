@@ -152,6 +152,9 @@ const contentSchema = new mongoose.Schema(
 // Common query patterns: category + trending, category + genre.
 contentSchema.index({ category: 1, isTrending: -1 });
 contentSchema.index({ category: 1, genres: 1 });
-contentSchema.index({ title: 'text', synopsis: 'text' });
+contentSchema.index(
+  { title: 'text', synopsis: 'text' },
+  { language_override: 'textIndexLanguage' }
+);
 
 module.exports = mongoose.model('Content', contentSchema);
